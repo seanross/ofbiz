@@ -30,6 +30,6 @@ rm -f $OFBIZ_LOG
 # Allows to run from Jenkins. See http://wiki.jenkins-ci.org/display/JENKINS/ProcessTreeKiller. Cons: the calling Jenkins job does not terminate if the log is not enabled, pros: this allows to monitor the log in Jenkins
 #BUILD_ID=dontKillMe
 # JLR post Gradle comment, not sure this is still true...
-
+echo $OFBIZ_HOME
 # start ofbiz
 (cd "$OFBIZ_HOME" && exec gradlew ofbiz)
